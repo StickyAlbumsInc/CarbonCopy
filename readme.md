@@ -18,7 +18,6 @@ To use CarbonCopy, you'll need to add it as a processor inside of your model, li
     },
     processors: [:carbon_copy, :thumbnail]
 
-
 ###Configuration
 
 CarbonCopy requires that you provide some confugration varialbes, namely `aws_bucket`, `aws_access_key` and `aws_secret_key`. These variables tell CarbonCopy how to connect to S3 and where to put the uploaded files.
