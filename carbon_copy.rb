@@ -23,6 +23,7 @@ module Paperclip
         s3 = AWS::S3.new(:access_key_id => @aws_access_key,:secret_access_key => @aws_secret_key)
         s3.buckets[@aws_bucket].objects[dst].write(:file => @file.path)
       rescue
+        raise Paperclip::Error, "Could not upload to S3: Ensure bucket name and credentials are correct." if @whiny
       end
 
       temp_file
